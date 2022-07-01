@@ -56,18 +56,18 @@ function watchAllFile()
     watch(['dev-server/scripts/*.js','!app/**/*.min.js']).on('change', browserSync.reload);
     watch(['dev-server/style/style.css']).on('change', browserSync.reload);
     watch(['dev-server/*.html']).on('change', browserSync.reload);
-    // watch(['app/images/**'], images);
 }
 
-function prodaction_v_1_0()
+function production_v_1_0()
 {
+    console.log('проверить валидацию html, css, bem, выпилить комменты')
     return src(['dev-server/**/*','!dev-server/style/**','dev-server/**/*.css'])
-        .pipe(dest('prodaction/'));
+        .pipe(dest('production/'));
 }
 
 exports.importTemplate = importTemplate;
 exports.browserSync = browser_sync;
 exports.watchAllFile = watchAllFile;
-//
+
 exports.default      = parallel( browser_sync, watchAllFile );
-exports.prodaction   = series( prodaction_v_1_0 );
+exports.production   = series( production_v_1_0 );

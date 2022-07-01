@@ -1,1 +1,4 @@
-# 5d_test
+### 5d_test
+
+#### Запуск проекта
+./production/index.html  double click

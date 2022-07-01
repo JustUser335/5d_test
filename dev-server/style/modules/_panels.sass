@@ -30,10 +30,14 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1)
     max-width: 234px
     background: #FFF
+    cursor: pointer
+    transition:  background-color .25s linear
     &__svg
       $height: calc(1vw * 25)
       height: $height
       margin-bottom: 2px
+      transition:  fill .25s linear
+      fill: #FFE267
     &__caption-wrapper
       height: 100%
       display: flex
@@ -45,6 +49,10 @@
       line-height: 110%
       display: flex
       align-items: center
+    &:hover
+      background-color: #FFE267
+      .panel__svg
+        fill: #fff
 
 @media all and (min-width: 375px)
   .panel
