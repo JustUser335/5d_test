@@ -1,9 +1,0 @@
-@font-face {
-	font-family: "Circe Bold";
-	src: url("circe_bold.eot");
-	src: url("circe_bold.eot?#iefix") format("embedded-opentype"),
-		url("circe_bold.woff2") format("woff2"),
-		url("circe_bold.woff") format("woff"),
-		url("circe_bold.ttf") format("truetype"),
-		url("circe_bold.svg#circe_bold") format("svg");
-}
