@@ -1,0 +1,96 @@
+//font rubik 700 64 24 15 +
+//font rubik 400 16 +
+//font circe 700 22
+
+// base
+
+
+$fz64: 4rem
+$fz24: 1.5rem
+$fz22: 1.375rem
+$fz16: 1rem
+$fz15: 0.9375rem
+$fz12: 0.75rem
+
+*
+  box-sizing: border-box
+
+.wrapper
+  display: flex
+
+.caption-r
+  font-family: Rubik
+  font-weight: bold
+  &__year-t
+    font-size: $fz24
+  &__year-n
+    font-size: $fz64
+
+.caption-c
+  font-family: "Circe Bold"
+  font-size: $fz22
+  line-height: 110%
+
+.caption-r,
+.caption-c
+  &_mb
+    margin-bottom: 10px
+.text
+  font-family: Rubik
+  font-weight: 400
+  font-size: $fz16
+  text-align: left
+  line-height: 34px
+  padding-left: 27px
+
+a
+  font-family: Rubik
+  font-weight: 700
+  font-size: $fz15
+
+.img-students-1
+  background-image: url("../img/Oksford-6-759x577 1.png")
+  //background-image: url("../img/Oksford-6-759x577 3.png")
+  background-size: auto 100%
+  background-position: center
+  background-repeat: no-repeat
+  width: 86.68%
+  max-width: 560px
+  min-height: 280px
+  border-radius: 5px 5px 0px 0px
+  box-shadow: 0 4px 4px #00000025
+
+
+.img-students-2
+  background-image: url("../img/Rectangle 74.png")
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: cover
+  position: relative
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background: #4E429470
+
+.link
+  display: inline-block
+  height: 25px
+  line-height: 115%
+  width: 100px
+  font-family: Rubik
+  font-weight: 700
+  font-size: $fz15
+  color: #333
+  text-decoration: none
+  border-bottom: 1px solid #333
+  text-align: center
+//.margin
+//  margin: 0 6.66%
+
+//.hide
+//  visibility: hidden

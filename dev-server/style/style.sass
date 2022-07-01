@@ -1,0 +1,55 @@
+@import "modules/clearcss"
+@import "modules/elements"
+@import "../font/cerce/circe_bold.css"
+@import "../font/rubik/rubik.css"
+@import "modules/base"
+@import "modules/events"
+@import "modules/events-desc"
+/* cледующий сюда */
+@import "modules/panels" // panel доделать ховеры
+
+// TODO Проверяй конечный код в валидаторе
+// TODO Выпилить все коментарии
+
+@media all and (min-width: 320px)
+  header
+    + svg
+      display: none
+  .container
+    max-width: 1440px
+    margin: auto
+    .wrapper
+      flex-direction: column
+    //> .wrapper
+    //  > *
+    //    &:first-child
+    //      padding-top: 127px
+    //    &:last-child
+    //      padding-bottom: 172px
+    &__content
+      margin-bottom: 70px
+      &:last-child
+        margin-bottom: 0
+.container
+  > .wrapper
+    @media all and (min-width: 320px)
+      > *
+        &:first-child
+          padding-top: 127px
+        &:last-child
+          padding-bottom: 172px
+    @media all and (min-width: 768px)
+      > *
+        &:first-child
+          padding-top: 92px
+        &:last-child
+          padding-bottom: 150px
+    @media all and (min-width: 1024px)
+      > *
+        &:first-child
+          padding-top: 152px
+        &:last-child
+          padding-bottom: 92px
+
+
+

@@ -1,0 +1,93 @@
+@media all and (min-width: 320px)
+  .events
+    &__wrapper
+      display: grid
+      grid-gap: 160px
+      grid-template: repeat(2, auto) / 1fr
+      margin: 0 6.66%
+    &__container
+      display: flex
+      &:first-child
+        justify-content: flex-start
+      &:last-child
+        justify-content: flex-end
+      > *
+        max-width: 300px
+    &_size
+      > *
+        max-width: 270px
+    &__orange-circle
+      &::before
+        top: -9px
+        left: -66px
+    &__triangle
+      &::before
+        top: 66px
+        left: -36vw //110px
+        transform: rotate(339deg)
+    &__line-circle
+      &::after
+        top: 503px
+        height: 220px
+        bottom: 0
+        margin: auto
+        left: -210px
+        right: 0
+@media all and (min-width: 375px)
+  .events
+    &__triangle
+      &::before
+        left: -163px
+        transform: rotate(339deg)
+    &__line-circle
+      &::after
+        left: -227px
+        top: 467px
+@media all and (min-width: 560px)
+
+@media all and (min-width: 590px)
+  .events
+    &__container
+      > *
+        width: 70%
+        max-width: 430px
+    &__line-circle
+      &::after
+        left: -23%
+@media all and (min-width: 768px)
+  .events
+    &__wrapper
+      grid-gap: 30px
+    &_padding
+      padding-left: 60px
+    &__orange-circle
+      &::before
+        top: 39px
+        left: 48px
+    &__triangle
+      &::before
+        top: -9px
+        left: -27px
+        transform: rotate(0deg)
+    &__line-circle
+      &::after
+        left: 0
+        top: 510px
+        height: 248px
+@media all and (min-width: 1024px)
+  .events
+    &__wrapper
+      max-width: 966px
+      margin: auto
+    &__container
+      > *
+        max-width: 530px
+    &_padding
+      padding-left: 85px
+    &__line-circle
+      &::after
+        left: 80px
+@media all and (min-width: 1160px)
+  .events
+    &__wrapper
+      max-width: 1125px

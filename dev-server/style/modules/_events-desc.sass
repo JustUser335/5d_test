@@ -1,0 +1,188 @@
+@media all and (min-width: 320px)
+  .events-description
+    &__wrapper
+      position: relative
+    &__container
+      padding: 0 0 65px 0
+      margin: 5px 6.66% 0
+    &__blue-container
+      position: relative
+      &::before
+        content: ""
+        z-index: -1
+        display: block
+        position: absolute
+        left: -7.66%
+        width: calc(100% + 15.32%)
+        top: -46px
+        height: calc(100% + 46px)
+        background: #A5E5F4
+    &_white-text
+      color: #fff
+      *
+        color: inherit!important
+        position: relative
+        z-index: 1
+    &__b1
+      grid-area: b1
+      margin: auto 6.66% auto 6.66%
+      margin-bottom: 46px
+    &__b2
+      grid-area: b2
+      position: relative
+    &__b3
+      grid-area: b3
+      padding: 10px 47px 44px 49px
+      background-position-x: 73%
+      > *
+        max-width: 375px
+        margin: auto
+    &__b4
+      grid-area: b4
+      height: 60px
+    &__container-link
+      height: 35px
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      margin: auto 6.66%
+    &__link
+      height: 23px
+      margin-top: 9px
+    &__orange-circle
+      &::before
+        width: 35px
+        height: 35px
+        background-size: contain
+        left: -18px
+        top: -7px
+    &__cup
+      &::before,
+      &::after
+        top: auto
+        bottom: 0
+      &::before
+        left: 24px
+      &::after
+        left: 94px
+    &__img-student-1
+      margin: auto 6.66% auto 6.66%
+    &__d5d
+      position: absolute
+      top: initial
+      bottom: -55px
+      right: -183px
+      left: 0
+      margin: auto
+      width: 130px
+      height: 129px
+      transform: rotateY(17deg)
+      z-index: 1
+    &__svg
+      height: 100%
+      width: 100%
+    &__pentagon
+      --top-pos: 0
+      &::before
+        top: var(--top-pos)
+        width: calc(291px / 2)
+        margin: auto 0.5vw auto auto
+        //margin: auto -6.5vw auto auto
+        right: 0
+        transition: top 1s ease
+@media all and (min-width: 375px)
+  .events-description
+    &__b3
+      padding: 10px 47px 75px 49px
+    &__pentagon
+      &::before
+//left: 0
+//right: 0
+//margin: auto -29px auto auto
+@media all and (min-width: 450px)
+  .events-description
+    &__b3
+      padding: 10px 47px 0 49px
+    &__img-student-2
+      height: calc(100vw / 1.755)
+      background-size: 100% auto
+@media all and (min-width: 590px)
+  .events-description
+    &__img-student-1
+      margin: auto
+@media all and (min-width: 768px)
+  .events-description
+    &__wrapper
+      display: grid
+      grid-template: 280px 90px 250px 70px/ 1fr 1fr
+      grid-template-areas: "b1 b2" ". b2" "b3 b2" "b3 b4"!important
+      margin: auto 6.66%
+    &__b1,
+    &__container-link,
+    &__img-student-1,
+    &__container
+      margin: 0
+    &__img-student-1
+      width: 100%
+      background-position-x: 87%
+    &__container
+      padding: 25px 0 25px 27px
+    &__blue-container
+      &::before
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    &__img-student-2
+      height: 319px
+      background-size: cover
+      background-position-x: 73%
+      border-radius: 5px
+      box-shadow: 0 4px 4px #00000025
+    &__b3
+      > *
+        margin: initial
+    &__b4
+      height: 70px
+      display: flex
+      justify-content: flex-end
+      align-items: center
+    &__d5d
+      top: 2px
+      bottom: 0
+      right: initial
+      left: -67px
+      width: 144px
+      height: 200px
+      transform: rotate(18deg)
+    &__pentagon
+      --top-pos: -345px
+      &::before
+        left: 0
+        right: 0
+        top: var(--top-pos)
+        margin: auto auto auto -7vw
+        background-position-x: right
+        width: calc(325px / 2)
+@media all and (min-width: 1024px)
+  .events-description
+    &__wrapper
+      max-width: 966px
+      margin: auto
+      grid-template: 280px 48px 250px 70px/1fr 1fr
+    &__container
+      padding: 50px 0 48px 46px
+    &__blue-container
+      &::before
+        width: 49.2vw
+        max-width: 720px
+    &__pentagon
+      &::before
+        top: -193px
+        margin: auto auto auto -193px
+        width: 325px
+        max-width: 325px
+@media all and (min-width: 1160px)
+  .events-description
+    &__wrapper
+      max-width: 1125px
