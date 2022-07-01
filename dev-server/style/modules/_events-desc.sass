@@ -164,6 +164,19 @@
         margin: auto auto auto -7vw
         background-position-x: right
         width: calc(325px / 2)
+    &__container-link
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        min-width: 113px
+        max-width: 288px
+        width: 17vw
+        height: 0
+        border-bottom: 1px dashed #000
+        left: 34px
+        right: 0
+        margin: auto
 @media all and (min-width: 1024px)
   .events-description
     &__wrapper

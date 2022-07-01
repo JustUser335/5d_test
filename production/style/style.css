@@ -504,6 +504,19 @@ a {
     background-position-x: right;
     width: calc(325px / 2);
   }
+  .events-description__container-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    min-width: 113px;
+    max-width: 288px;
+    width: 17vw;
+    height: 0;
+    border-bottom: 1px dashed #000;
+    left: 34px;
+    right: 0;
+    margin: auto;
+  }
 }
 @media all and (min-width: 1024px) {
   .events-description__wrapper {
@@ -571,6 +584,12 @@ a {
     background: #FFF;
     cursor: pointer;
     transition: background-color 0.25s linear;
+  }
+  .panel:last-child {
+    background: #FFE267;
+  }
+  .panel:last-child:hover {
+    background: #FFF;
   }
   .panel__svg {
     height: calc(1vw * 25);
