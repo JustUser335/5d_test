@@ -216,6 +216,10 @@ a {
 }
 
 @media all and (min-width: 320px) {
+  .events__caption-wrapper.triangle.events__triangle::before {
+    display: none;
+  }
+
   .events__wrapper {
     display: grid;
     grid-gap: 160px;
@@ -241,10 +245,14 @@ a {
     top: -9px;
     left: -66px;
   }
+  .events__triangle {
+    --rotate-state: 339deg;
+  }
   .events__triangle::before {
     top: 66px;
-    left: -36vw;
-    transform: rotate(339deg);
+    left: -110px;
+    transform: rotate(var(--rotate-state));
+    transition: transform 1s ease;
   }
   .events__line-circle::after {
     top: 503px;
@@ -256,13 +264,20 @@ a {
   }
 }
 @media all and (min-width: 375px) {
-  .events__triangle::before {
-    left: -163px;
-    transform: rotate(339deg);
-  }
   .events__line-circle::after {
     left: -227px;
     top: 467px;
+  }
+}
+@media all and (min-width: 440px) and (max-width: 767px) {
+  .events__line-circle::after {
+    margin: auto auto auto 0;
+    left: 16vw;
+  }
+}
+@media all and (min-width: 560px) {
+  .events__line-circle::after {
+    left: 23vw;
   }
 }
 @media all and (min-width: 590px) {
@@ -271,10 +286,18 @@ a {
     max-width: 430px;
   }
   .events__line-circle::after {
-    left: -23%;
+    left: 31%;
   }
 }
 @media all and (min-width: 768px) {
+  .events__container.triangle.events__triangle::before {
+    display: none;
+  }
+
+  .events__caption-wrapper.triangle.events__triangle::before {
+    display: block;
+  }
+
   .events__wrapper {
     grid-gap: 30px;
   }
@@ -285,10 +308,14 @@ a {
     top: 39px;
     left: 48px;
   }
+  .events__triangle {
+    --rotate-state: 0deg;
+    --pos-left: 0;
+  }
   .events__triangle::before {
     top: -9px;
     left: -27px;
-    transform: rotate(0deg);
+    transform: rotate(var(--rotate-state)) translateX(var(--pos-left));
   }
   .events__line-circle::after {
     left: 0;
@@ -408,7 +435,7 @@ a {
     margin: auto;
     width: 130px;
     height: 129px;
-    transform: rotateY(17deg);
+    transform: rotate(17deg);
     z-index: 1;
   }
   .events-description__svg {
@@ -416,7 +443,7 @@ a {
     width: 100%;
   }
   .events-description__pentagon {
-    --top-pos: 0;
+    --top-pos: 0px;
   }
   .events-description__pentagon::before {
     top: var(--top-pos);
@@ -438,6 +465,35 @@ a {
   .events-description__img-student-2 {
     height: calc(100vw / 1.755);
     background-size: 100% auto;
+  }
+}
+@media all and (min-width: 450px) and (max-width: 767px) {
+  .events-description__b3 {
+    align-items: center;
+    display: grid;
+    max-width: 100%;
+  }
+  .events-description__b3 > * {
+    margin: auto 0;
+    max-width: 100%;
+  }
+  .events-description__caption {
+    align-self: start;
+  }
+  .events-description__text {
+    align-self: center;
+    max-width: 367px;
+    margin: auto;
+  }
+}
+@media all and (min-width: 570px) and (max-width: 767px) {
+  .events-description__caption {
+    margin-left: 10%;
+  }
+}
+@media all and (min-width: 700px) and (max-width: 767px) {
+  .events-description__caption {
+    margin-left: 15%;
   }
 }
 @media all and (min-width: 590px) {
@@ -474,6 +530,9 @@ a {
     background-position-x: 73%;
     border-radius: 5px;
     box-shadow: 0 4px 4px #00000025;
+  }
+  .events-description__b3 {
+    padding: 29px 47px 0 49px;
   }
   .events-description__b3 > * {
     margin: initial;
@@ -531,11 +590,19 @@ a {
     width: 49.2vw;
     max-width: 720px;
   }
+  .events-description__pentagon {
+    --top-pos: -193px;
+  }
   .events-description__pentagon::before {
-    top: -193px;
+    top: var(--top-pos);
     margin: auto auto auto -193px;
     width: 325px;
     max-width: 325px;
+  }
+  .events-description__b3 {
+    padding: 0px 47px 0 49px;
+    display: flex;
+    align-items: center;
   }
 }
 @media all and (min-width: 1160px) {

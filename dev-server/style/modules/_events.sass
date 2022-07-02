@@ -1,4 +1,7 @@
 @media all and (min-width: 320px)
+  .events__caption-wrapper.triangle.events__triangle
+    &::before
+      display: none
   .events
     &__wrapper
       display: grid
@@ -21,10 +24,12 @@
         top: -9px
         left: -66px
     &__triangle
+      --rotate-state: 339deg
       &::before
         top: 66px
-        left: -36vw //110px
-        transform: rotate(339deg)
+        left: -110px
+        transform: rotate(var(--rotate-state))
+        transition: transform 1s ease
     &__line-circle
       &::after
         top: 503px
@@ -35,16 +40,21 @@
         right: 0
 @media all and (min-width: 375px)
   .events
-    &__triangle
-      &::before
-        left: -163px
-        transform: rotate(339deg)
     &__line-circle
       &::after
         left: -227px
         top: 467px
+@media all and (min-width: 440px) and (max-width: 767px)
+  .events
+    &__line-circle
+      &::after
+        margin: auto auto auto 0
+        left: 16vw
 @media all and (min-width: 560px)
-
+  .events
+    &__line-circle
+      &::after
+        left: 23vw
 @media all and (min-width: 590px)
   .events
     &__container
@@ -53,8 +63,14 @@
         max-width: 430px
     &__line-circle
       &::after
-        left: -23%
+        left: 31%
 @media all and (min-width: 768px)
+  .events__container.triangle.events__triangle
+    &::before
+      display: none
+  .events__caption-wrapper.triangle.events__triangle
+    &::before
+      display: block
   .events
     &__wrapper
       grid-gap: 30px
@@ -65,10 +81,12 @@
         top: 39px
         left: 48px
     &__triangle
+      --rotate-state: 0deg
+      --pos-left: 0
       &::before
         top: -9px
         left: -27px
-        transform: rotate(0deg)
+        transform: rotate(var(--rotate-state)) translateX(var(--pos-left))
     &__line-circle
       &::after
         left: 0
